@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Visualization Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"-->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+        
+                <!-- Collect the nav links, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!--left nav link-->
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="index.html">LATITUDE
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--Right nav link-->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="temperature.html">Max Temperature</a>
+                                </li>
+                                <li>
+                                    <a href="humidity.html">Humidity</a>
+                                </li>
+                                <li>
+                                    <a href="cloudiness.html">Cloudiness</a>
+                                </li>
+                                <li>
+                                    <a href="wind.html">Wind Speed</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="comparison.html">Comparison</a>
+                        </li>
+                        <li>
+                            <a href="data.html">Data</a>
+                        </li>
+    
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    
+        <!--Main Grid-->
+        <div class= "container">
+            <div class= "row">
+                <div class= "col-md-7">
+                    <div class= "main-box">
+                    <h1 class= "main-pg-header">Summary: Latitude vs. X</h1>
+                    <hr>
+                    <div class= "summary txt">
+                        <img id= "main-img" src= "Images/Latitude_Temperature_Plot.png", alt= "Temp vs Latitude">
+                        <p>
+                            The purpose of this project was to analyze how weather changes as you get closer to the equator.  
+                            To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.  
+                            After assembling the dataset, we used Matplotlib, to plot various aspects of the weather vs. latitude.  
+                            Factors we looked at included: temperature, cloudiness, wind speed, and humidity.  This site provides the sourced
+                            data and visualizations created as part of the analysis, as well as explanation and descriptions of any trends and correlations witnessed.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class= "col-md-5">
+                    <div class= "side-box">
+                    <h2 class= "main-pg-subheader">Visualizations</h2>
+                    <hr>
+                    
+                       <div class="sidebar">
+                            <a href="temperature.html"><img id= "side-img1" src="Images/Latitude_Temperature_Plot.png" class=" img-thumbnail" alt="Latitude vs Temperature"></a>
+                          
+                            <a href="cloudiness.html"><img id= "side-img2" src="Images/Latitude_Cloudiness.png" class="img-thumbnail" alt="Latitude vs cloudiness"></a>
+                            
+                           
+                            <a href="humidity.html"><img id= "side-img3" src="Images/Latitude_Humidity.png" class="img-thumbnail" alt="Latitude vs Humidity"></a>
+                           
+                            <a href="windspeed.html"><img id= "side-img4" src="Images/Latitude_WindSpeed.png" class=" img-thumbnail" alt="Latitude vs Wind Speed"></a>
+                        </div>
+                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer class="bottom-footer">
+        <div class="container">
+                <p class="footer-txt center">
+                        <small>© Copyright Coding Bootcamp 2017</br>
+                        </small>
+                      </p>
+                    </div>
+                  </footer>
+</body>
+</html>
